@@ -1,0 +1,57 @@
+kunden
+------
+PK: kundennr
+- adressgrp
+- name
+- strasse
+- plz
+- ort
+- nm_beat
+- nm_krank_kass
+- nm_kvnr
+- nm_gebdat
+- nm_status
+
+beleg
+-----
+PK: belegnr
+FK: adressnr -> kunden.kundennr
+- belegtyp
+- belegart
+- belegdat
+- name
+- strasse
+- plz
+- ort
+- netto
+- brutto
+
+belegpos
+--------
+PK: belegnr, belegtyp, belegart
+FK: belegnr -> beleg.belegnr
+FK: adressnr -> kunden.kundennr
+FK: artikelnr -> artikel.artikelnr
+- arttext
+- gesamt
+- nm_hilfsnr
+- nm_hmkz
+- nm_hmverszeit
+- nm_verszeit_von
+- nm_verszeit_bis
+
+serien
+------
+PK: herstsernr
+FK: kundennr -> kunden.kundennr
+FK: artikelnr -> artikel.artikelnr
+- text1
+- lilidat
+- kennung
+
+artikel
+-------
+PK: artikelnr
+- wgr
+- arttext
+- nm_himinr
