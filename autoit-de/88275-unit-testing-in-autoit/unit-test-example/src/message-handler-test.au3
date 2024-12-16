@@ -3,6 +3,6 @@
 _TestSayHello()
 
 Func _TestSayHello()
-    ;~ HINT: Is't mangaged because no real need for it.
+    ;~ HINT: It is not mangaged because no real need for it.
     ;~ _SayHello()
 EndFunc
